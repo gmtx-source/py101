@@ -42,3 +42,6 @@ match conta:
         output = (int(n1) / int(n2))
 
 print(f'Result: {output}')
+
+
+print('teste A')
