@@ -1,5 +1,12 @@
+import json
+
+with open('calculator_messages.json', 'r') as file:
+    MESSAGES = json.load(file)
+
 def prompt(message):
-    print(f'==> {message}')
+    print(f"==> {message}")
+
+prompt(MESSAGES['welcome'])
 
 def invalid_number(number_str):
     try:
@@ -9,21 +16,20 @@ def invalid_number(number_str):
     
     return False
 
-### Function new calculation
-def number_calculation():
+while True:
 
     prompt('This is a calculator')
     prompt('Choose a number: ')
     n1 = input()
 
     while invalid_number(n1):
-        prompt("That's an invalid number... Choose another number: ")
+        prompt(MESSAGES['invalid_number'])
         n1 = input()
 
     prompt('Choose another number: ')
     n2 = input()
     while invalid_number(n2):
-        prompt("That's an invalid number... Choose another number: ")
+        prompt(MESSAGES['invalid_number'])
         n2 = input()
 
     prompt('Choose 1) Addition, 2) Subtraction, 3) Multiplication, 4) Division')
@@ -44,21 +50,9 @@ def number_calculation():
             output = (int(n1) / int(n2))
 
     print(f'Result: {output}')
-    return output
 
-number_calculation()
-
-prompt('Would you like to make another calculation? type y or n')
-newcalculation = input()
-
-while newcalculation not in ['y', 'n']:
-    prompt('Invalid input insert again: ')
-    newcalculation = input()
-
-while newcalculation == 'y':
-    number_calculation()
-    prompt('Would you like to make another calculation? type y or n')
-    newcalculation = input()
-
-if newcalculation == 'n':
-    prompt('THANKS FOR USING THE CALCULATOR')
+    prompt('Would to like to perform another calculation? (y/n)? ')
+    
+    answer = input()
+    if answer and answer[0].lower() != 'y':
+        break    
