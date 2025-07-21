@@ -1,4 +1,23 @@
 {
-    "welcome": "Welcome to Calculator!",
-    "invalid_number": "That's an invalid number... Choose another number: "
+    "en": {
+      "welcome": "Welcome to Calculator!",
+      "invalid_number": "That's an invalid number... Choose another number: ",
+      "choose_first_number": "Choose a number:",
+      "choose_second_number": "Choose another number:",
+      "choose_operation": "Choose 1) Addition, 2) Subtraction, 3) Multiplication, 4) Division",
+      "invalid_operation": "Must choose between 1 and 4",
+      "result": "Result: ",
+      "another_calculation": "Would you like to perform another calculation? (y/n)"
+    },
+    "es": {
+      "welcome": "¡Bienvenido a la calculadora!",
+      "invalid_number": "Hmm... eso no parece un número válido.",
+      "choose_first_number": "Elige un número:",
+      "choose_second_number": "Elige otro número:",
+      "choose_operation": "Elige 1) Suma, 2) Resta, 3) Multiplicación, 4) División",
+      "invalid_operation": "Debes elegir entre 1 y 4",
+      "result": "Resultado: ",
+      "another_calculation": "¿Quieres hacer otro cálculo? (s/n)"
+    }
   }
+  
